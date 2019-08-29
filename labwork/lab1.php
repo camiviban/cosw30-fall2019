@@ -6,7 +6,7 @@
         <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
         <style>
             h1 {
-                background-image: url(blue_bg.jpg);)
+                background-image: url("https://cosw30-fall2019.000webhostapp.com/cosw30-fall2019/labwork/lab1/blue_bg.jpg");
                 font-family: 'Manjari', sans-serif;
                 font-weight: 700;
                 font-size: 2.75em;
