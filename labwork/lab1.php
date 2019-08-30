@@ -78,6 +78,7 @@
                 float: left;
                 margin: 2%;
                 max-width: 44%;
+                margin-bottom: 5%;
                 }
             
             #github_profile_section {
@@ -123,6 +124,13 @@
             <h1 id="header_section"></h1>
         </header>
         
+        <!-- PHP multi-line comment -->
+        <?php
+            /* Filename: lab1.php */
+            /* Name: Ona */
+            /* Date: Aug 29 */
+        ?>
+        
         <main>
             <section id="whole_page">
                 <section id="sections_except_github_section">
@@ -142,23 +150,28 @@
 
                     <section class="assignment_thoughts_sections">
                         <h2>Thoughts on the assignment</h2>
-                        <p>I enjoyed fiddling around with the HTML and CSS, testing out colors and changing the em font-sizes. It was good practice as some of the code got broken and required trying to clean it up, or trying to add more "section" id and classes. I liked how we have immediately jumped into creating pages!</p>
+                        <p>I enjoyed fiddling around with the HTML and CSS, testing out colors and changing the em font-sizes. It was good practice as some of the code got broken and required trying to clean it up, or trying to add more "section" id and classes. I liked how we have immediately jumped into creating pages! I think the PHP parts will remain the most challenging for to wrap my head around, so here goes: crossing fingers.</p>
                     </section>
                     
+                    <!-- PHP paragraph 1 -->
                     <section class="php_paragraphs">
-                        <?php
-                            echo '<h2>Favorite Websites</h2>
-                                <p>In terms of websites I enjoy, I like <a href="https://www.youtube.com/watch?v=Q9yn1DpZkHQ" target="_blank">electro/cyberpunk music like this</a> when working on the computer. It's fun to pick a random song and let it autoplay, sometimes I stumble upon songs or mixes I've never heard before. Another website I'm on is <a href="https://old.reddit.com" target="_blank">Reddit</a>. It's pretty much a giant collection of forums of just about any topic.</p>';
-                        ?>
+                            <?php 
+                                echo "<h2>Favorite Websites</h2>";
+                                echo "<p>In terms of websites I enjoy, I like electro cyberpunk music like <a href=\"https://www.youtube.com/watch?v=Q9yn1DpZkHQ\" target=\"_blank\">this</a> when working on the computer. Another website I enjoy is <a href=\"https://old.reddit.com\" target=\"_blank\">Reddit</a>, pretty much a giant collection of forums on just about any topic. Some of the subreddits I like are Cozy Places, Movies, and Sushi.</p>";
+                            ?>
                     </section>
 
+                    <!-- PHP paragraph 2 -->
                     <section class="php_paragraphs">
-                        <?php echo '<h2>Challenges?</h2>
-                            <p>Margins and padding doing weird things! Sometimes I'll find that margins or applied to certain sections of the code are creating undesirablely large spaces on areas I didn't want them to. So there's a good chunk of time troubleshooting where the issue is to remove that rogue margin/padding effect. I also found the PHP hard, in terms of trying to get the CSS section styling to work on it.</p>';
+                            <?php 
+                                echo "<h2>Challenges?</h2>";
+                                echo "<p>Margins and padding doing weird things! Sometimes I would find that margins or applied to certain sections of the code were creating undesirablely large spaces in strange areas. It required some troubleshooting to find where the issue was to remove that rogue margin or  padding effect. I also found the PHP hard, in terms of trying to get the CSS section styling to work on it.</p>";
+                            ?>
                     </section>
 
                 </section>
 
+                    <!-- This is the Github link button -->
                     <a id="github_profile_link" href="https://github.com/camiviban" target="_blank">
                         <section id="github_profile_section">
                             <p>Github Profile</p>
