@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Cuprum&display=swap" rel="stylesheet">
+        <title>Homework 2: Political Campaign Supporter Form</title>
+        <style>
+            header { 
+                text-align: center;
+                background-color: black;
+                color: white;
+                margin-bottom: -3%;
+                padding: 1%;
+                }
+            
+            legend {
+                font-size: 1.5em;
+                font-style: normal;
+                padding: 10px;
+                color: white;
+                background-color: darkred;
+                }
+            
+            body { 
+                font-family: 'Cuprum', sans-serif;
+                margin: 0;
+                }
+            
+            h2 {
+                letter-spacing: 0.07em;     
+                }
+            
+            main { 
+                margin: 5% 20%;
+                }
+                
+            fieldset {
+                border-color: darkred;
+                border-radius: 0 10px 30px 10px;
+                margin-top: 4%;
+                }
+            
+            label {
+                font-weight: 700;
+                color: black;
+                }
+            
+            .required_star {
+                color: blue;
+                font-weight: 700;
+                font-size: 1.2em;
+                }
+            
+            #form_section {
+                float: left;
+                margin: 2%;
+                }
+            
+            #form_paragraph {
+                margin: 10%;
+                }
+              
+            footer {
+                clear: both;
+                background-color: lightgray;
+                padding: 0.03%;
+                text-align: center;
+                opacity: 0.6;
+                }
+            
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <h1>Homework 2: Political Campaign Supporter Form</h1>
+        </header>
+        
+        <main>
+            <section id="candidate_introduction">
+                <h2>SECONDARY TITLE</h2>
+                <p>Add some text here about the imaginary candidate. 
+                <p> ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu elit eget tellus vulputate dapibus. Praesent vehicula ligula id lacus auctor convallis non et diam. Mauris justo nulla, pulvinar et nibh non, viverra mollis nisi. Nullam porttitor, eros vel fringilla consectetur, lectus tellus maximus magna, eu hendrerit est mi quis turpis. Pellentesque eget aliquam mi. Maecenas condimentum nisl sed semper hendrerit. Sed ac mi aliquet, convallis tellus sit amet, rhoncus felis. Mauris interdum ipsum velit, feugiat finibus elit hendrerit vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <p>Suspendisse vel vestibulum nisl, vel feugiat diam. Vestibulum urna metus, pharetra quis dui sit amet, molestie tempor nunc. Mauris hendrerit egestas eros vitae aliquet.</p>
+            </section>
+
+            <form action="process_contact.php" method="POST">
+                <fieldset>
+                        <legend>Fill this form out and join us!</legend>
+                    
+                        <section id="form_section">
+                        <p>
+                            <label>First Name </label><span class="required_star">*</span><br>
+                        <input for="first_name" type="text" name="first_name" size="20" required>
+                        </p>
+
+                        <p>
+                        <label>Last Name: </label><span class="required_star">*</span><br>
+                        <input for="last_name" type="text" name="last_name" required>
+                        </p>
+
+                        <p>
+                        <label>Email address </label><span class="required_star">*</span><br>
+                        <input for="email" type="email" name="email" required>
+                        </p>
+
+                        <p>
+                        <label>Gender
+                            <select name="gender" required>
+                                <option value="">Please select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="undisclosed">Prefer not to say</option>
+                                </select>
+                        </label><span class="required_star">*</span>
+                        </p>
+
+                        <p>
+                        <label>Age Range
+                            <select name="age" required>
+                                <option value="">Please select</option>
+                                <option value="0-29">Under 30</option>
+                                <option value="30-60">Between 30-60</option>
+                                <option value="60+">Over 60</option>
+                            </select>
+                        </label><span class="required_star">*</span>
+                        </p>
+
+                        <p>
+                        <label>Interests:<br>
+                            <input for="interests" type="checkbox" name="interests[]" value="Art">Art<br>
+                            <input for="interests" type="checkbox" name="interests[]" value="Science">Science<br>
+                            <input for="interests" type="checkbox" name="interests[]" value="Sports">Sports<br>
+                            <input for="interests" type="checkbox" name="interests[]" value="Entertainment">Entertainment<br>
+                            <input for="interests" type="checkbox" name="interests[]" value="Gym">Gym<br>
+                            <input for="interests" type="checkbox" name="interests[]" value="Travel">Travel<br>
+                        </label>
+                        </p>
+
+                        <p>
+                        <label>Contribution Amount: </label><br>
+                        <input for="contribution" type="value" name="contribution" value="0">
+                        </p>
+
+                        <p>
+                        <label>Sign up for our mailing list?</label>
+                        <input for="mailing_list" type="checkbox" name="mailing_list" value="Yes" checked>
+                        </p>
+
+                        <p>
+                        <label>Comments?<br>
+                            <textarea name="comments" input for="comments" rows="4" cols="30"></textarea>
+                        </label>
+                        </p>
+
+                        <input type="submit" name="submit" value="Submit">
+                        </section>
+
+                    <p id="form_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu elit eget tellus vulputate dapibus. Praesent vehicula ligula id lacus auctor convallis non et diam. Mauris justo nulla, pulvinar et nibh non, viverra mollis nisi. Nullam porttitor, eros vel fringilla consectetur, lectus tellus maximus magna, eu hendrerit est mi quis turpis. Pellentesque eget aliquam mi. Maecenas condimentum nisl sed semper hendrerit.</p>
+                </fieldset>
+            </form>
+            
+        </main>
+
+        <footer>
+            <p>COSW30 2019 - Ona - Homework2</p>
+        </footer>
+    </body>
+</html>
