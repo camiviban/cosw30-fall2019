@@ -2,21 +2,25 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link href="https://fonts.googleapis.com/css?family=Cuprum&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
         <title>Homework 2: Political Campaign Supporter Form - Process_contact</title>
         <style>
             header { 
                 text-align: center;
                 background-color: black;
                 color: white;
-                margin-bottom: -3%;
                 padding: 1%;
+                font-size: 2.0em;
+                margin: 0 20% 0 20%;
+                border-radius: 0 0 10px 10px;
                 }
+            
                 
             fieldset {
                 border-color: darkred;
                 border-radius: 0 10px 30px 10px;
                 margin-top: 4%;
+                background-color: whitesmoke;
                 }
                 
             legend {
@@ -28,7 +32,7 @@
                 }
 
             body { 
-                font-family: 'Cuprum', sans-serif;
+                font-family: 'Josefin Sans', sans-serif;
                 margin: 0;
                 }
                 

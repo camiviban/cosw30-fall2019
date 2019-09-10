@@ -2,15 +2,17 @@
 <html lang="eng">
     <head>
         <meta charset="utf-8">
-        <link href="https://fonts.googleapis.com/css?family=Cuprum&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
         <title>Homework 2: Political Campaign Supporter Form</title>
         <style>
             header { 
                 text-align: center;
                 background-color: black;
                 color: white;
-                margin-bottom: -3%;
                 padding: 1%;
+                font-size: 2.0em;
+                margin: 0 20% 0 20%;
+                border-radius: 0 0 10px 10px;
                 }
             
             legend {
@@ -19,10 +21,11 @@
                 padding: 10px;
                 color: white;
                 background-color: darkred;
+                margin-left: 60%;
                 }
             
             body { 
-                font-family: 'Cuprum', sans-serif;
+                font-family: 'Josefin Sans', sans-serif;
                 margin: 0;
                 }
             
@@ -37,7 +40,8 @@
             fieldset {
                 border-color: darkred;
                 border-radius: 0 10px 30px 10px;
-                margin-top: 4%;
+                margin-top: -4%;
+                background-color: whitesmoke;
                 }
             
             label {
@@ -51,13 +55,32 @@
                 font-size: 1.2em;
                 }
             
+            #crichton_image { 
+                float: right;
+                margin-top: -2%;
+                margin-left: 1%;
+                max-width: 50%;
+                }
+            
             #form_section {
-                float: left;
+                clear: both;
+                float: right;
                 margin: 2%;
                 }
             
             #form_paragraph {
-                margin: 10%;
+                margin: 5% 10% 5% 2%;
+                }
+                
+            li {
+                list-style: none
+                }
+            
+            #final_p_line {
+                font-size: 1.5em;
+                margin-top: 10%;
+                text-align: center;
+                font-weight:600;
                 }
               
             footer {
@@ -73,16 +96,10 @@
     
     <body>
         <header>
-            <h1>Homework 2: Political Campaign Supporter Form</h1>
+            <h1>John Crichton for Galactic President</h1>
         </header>
         
         <main>
-            <section id="candidate_introduction">
-                <h2>SECONDARY TITLE</h2>
-                <p>Add some text here about the imaginary candidate. 
-                <p> ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu elit eget tellus vulputate dapibus. Praesent vehicula ligula id lacus auctor convallis non et diam. Mauris justo nulla, pulvinar et nibh non, viverra mollis nisi. Nullam porttitor, eros vel fringilla consectetur, lectus tellus maximus magna, eu hendrerit est mi quis turpis. Pellentesque eget aliquam mi. Maecenas condimentum nisl sed semper hendrerit. Sed ac mi aliquet, convallis tellus sit amet, rhoncus felis. Mauris interdum ipsum velit, feugiat finibus elit hendrerit vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <p>Suspendisse vel vestibulum nisl, vel feugiat diam. Vestibulum urna metus, pharetra quis dui sit amet, molestie tempor nunc. Mauris hendrerit egestas eros vitae aliquet.</p>
-            </section>
 
             <form action="process_contact.php" method="POST">
                 <fieldset>
@@ -91,22 +108,22 @@
                         <section id="form_section">
                         <p>
                             <label>First Name </label><span class="required_star">*</span><br>
-                        <input for="first_name" type="text" name="first_name" size="20" required>
+                        <input for="first_name" type="text" name="first_name" size="20" required style="border-radius:10px">
                         </p>
 
                         <p>
                         <label>Last Name: </label><span class="required_star">*</span><br>
-                        <input for="last_name" type="text" name="last_name" required>
+                        <input for="last_name" type="text" name="last_name" required style="border-radius:10px">
                         </p>
 
                         <p>
                         <label>Email address </label><span class="required_star">*</span><br>
-                        <input for="email" type="email" name="email" required>
+                        <input for="email" type="email" name="email" required style="border-radius:10px">
                         </p>
 
                         <p>
                         <label>Gender
-                            <select name="gender" required>
+                            <select name="gender" required style="border-radius:10px">
                                 <option value="">Please select</option>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
@@ -117,7 +134,7 @@
 
                         <p>
                         <label>Age Range
-                            <select name="age" required>
+                            <select name="age" required style="border-radius:10px">
                                 <option value="">Please select</option>
                                 <option value="0-29">Under 30</option>
                                 <option value="30-60">Between 30-60</option>
@@ -139,7 +156,7 @@
 
                         <p>
                         <label>Contribution Amount: </label><br>
-                        <input for="contribution" type="value" name="contribution" value="0">
+                        <input for="contribution" type="value" name="contribution" value="0" style="border-radius:10px">
                         </p>
 
                         <p>
@@ -149,14 +166,34 @@
 
                         <p>
                         <label>Comments?<br>
-                            <textarea name="comments" input for="comments" rows="4" cols="30"></textarea>
+                            <textarea name="comments" input for="comments" rows="4" cols="30" style="border-radius:10px"></textarea>
                         </label>
                         </p>
 
-                        <input type="submit" name="submit" value="Submit">
+                        <input type="submit" name="submit" value="Submit" style="border-radius:5px">
                         </section>
 
-                    <p id="form_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu elit eget tellus vulputate dapibus. Praesent vehicula ligula id lacus auctor convallis non et diam. Mauris justo nulla, pulvinar et nibh non, viverra mollis nisi. Nullam porttitor, eros vel fringilla consectetur, lectus tellus maximus magna, eu hendrerit est mi quis turpis. Pellentesque eget aliquam mi. Maecenas condimentum nisl sed semper hendrerit.</p>
+                    <section id="form_paragraph">
+                        <span id="crichton_image"><img src="https://i.imgur.com/wf03tb5.png" alt="John Crichton doing an awkward thumbs up"></span>
+
+                        <h2 id="h2_crichton">Literally the only human for the job (in the Uncharted Territories)</h2>
+                        <p>John Crichton is <em>the</em> best candidate for Galactic President of the Uncharted Territories. Why? Look at the guy. That's the face of a man who totally, no joke, knows exactly what he's doing and isn't winging it at all. 
+                        </p>
+                        <p>Never. Nope. No sir.</p>
+                        <h3>Qualifications</h3>
+                        <ul>
+                            <li>- He's the only human in the Uncharted Territories</li>
+                            <li>- He's an astronaut from Earth</li>
+                            <li>- One of the few survivors of multiple trips through wormholes</li>
+                            <li>- Repeatedly escaped Peacekeeper bounties on his head</li>
+                            <li>- He robbed the Shadow Depository (and lived!)</li>
+                        </ul>
+                        
+                        <section id="final_p_line">
+                            <p>Join Team Crichton today!</p>
+                        </section>
+                    </section>
+                    
                 </fieldset>
             </form>
             
