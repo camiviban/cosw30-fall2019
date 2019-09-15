@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa|Gothic+A1|Noto+Serif+TC&display=swap" rel="stylesheet">
+
+        <title>Tuition Calculator</title>
+        <style>
+            
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Gothic A1', sans-serif;
+                }
+            
+            header {
+                margin: 0;
+                top: 0;
+                }
+            
+            h1 { 
+                text-align: center;
+                font-size: 4.3em;
+                color: darkred;
+                font-family: 'Noto Serif TC', serif;
+                margin-bottom: 2%;
+                margin-top: 0.5%;
+                padding: 0.5%;
+                margin-right: auto;
+                margin-left: auto;
+                width: 40%;
+                }
+            
+            h2 {
+                text-align: center;
+                font-size: 2em;
+                margin-bottom: 5%;
+                letter-spacing: 0.04em;
+                }
+            
+            h3 { 
+                border-left: 10px solid darkred;
+                padding-left: 10px;
+                }
+            
+            main {
+                margin-right: auto;
+                margin-left: auto;
+                width: 45%;
+                }
+            
+             select { 
+                text-align: center;
+                padding: 5px;
+                margin: 0.6%;
+                }
+            
+            section {
+                margin-bottom: 5%;
+                }
+                        
+            #required_section {
+                padding-bottom: 3%;
+                border: 3px dashed gainsboro;
+                padding: 2%;
+                border-radius: 0 0 10px 10px;
+                }
+            
+                        
+            #mandatory_healthfee_note {
+                text-align: center;
+                padding: 10px;
+                border: 2px solid gold;
+                border-radius: 6px;
+                margin-right: 25%;
+                margin-left: 25%;
+                }
+            
+            #optional_section {
+                border: 3px dashed gainsboro;
+                padding: 2%;
+                border-radius: 0 0 10px 10px;
+                }
+            
+            input[type=submit] {
+                background-color: darkseagreen;
+                color: black;
+                font-size: 1.05em;
+                padding: 3%;
+                margin-right: auto;
+                margin-left: auto;
+                width: 100%;
+                border-top: 10px solid green;
+                cursor: pointer;
+                font-weight: 700;
+                }
+            
+            footer {
+                text-align: center;
+                opacity: 0.6;
+                bottom: 0;
+                width: 99.9%;
+                }
+                    
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <h1><span id="longbeach">long beach</span>
+                <span id="city_college">city college</span></h1>
+        </header>
+        
+        
+        <main>
+            <h2>LBCC Tuition Calculator</h2>
+            
+            
+            <form action="process_tuition.php" method="post" required>
+                
+                <!--This is the REQUIRED section -->
+                    <h3>Fill out this form to calculate the total cost of tuition</h3>
+                
+                 <section id="required_section">
+                    <p>Are you a California state resident?
+                        <select name="resident_determination" required>
+                            <option value="">Select residency</option>
+                            <option value="46">Yes</option>
+                            <option value="265">No</option>
+                        </select>
+                    </p>
+
+                    <p>Number of units:
+                        <select name="unit_numbers" required>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        </select>
+                    </p>
+                     
+                    <p id="mandatory_healthfee_note">There is a <strong>mandatory</strong> Student Health Fee ($20).</p>
+                </section>
+                
+               <!--This is the OPTIONAL section -->
+                    <h3>Optional fees</h3>
+                <section id="optional_section">
+                    <p>College Service Card ($20):
+                        <select name="service_card">
+                            <option value="0">No</option>
+                            <option value="20">Yes</option>
+                        </select>
+                    </p>
+                    <p>Parking Permit ($30): 
+                        <select name="parking_permit">
+                            <option value="0">No</option>
+                            <option value="30">Yes</option>
+                        </select></p> 
+                </section>
+                
+                <!--This is the SUBMIT BUTTON section -->
+                <input type="submit" value="SUBMIT">
+                
+            </form>
+        </main>
+        
+        <footer>
+            <p>COSW 30 Fall 2019 - Homework 3 - Ona</p>
+        </footer>
+    </body>
+
+</html>
