@@ -170,7 +170,7 @@
                     if($resident == 46) {
                     echo "<p class=\"p_total\">Total resident balance due: $$total_balance_due</p>";
                     } else {
-                    echo "<p class=\"p_total\">Total nonresident balance due: $$total_balance_due2</p>";
+                    echo "<p class=\"p_total\">Total non-resident balance due: $$total_balance_due2</p>";
                     }
                     ?>
                     
