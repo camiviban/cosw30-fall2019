@@ -11,8 +11,7 @@
     */
     
     $textImplode = implode(' ',  $textExplode); //Turns the array back to a sstring
-        echo "<p>$textImplode</p>";
-        
+    
     for($i = 0; $i < $numParagraphs; $i++) {
         echo "<p>\"$textImplode\"</p>";
     }
