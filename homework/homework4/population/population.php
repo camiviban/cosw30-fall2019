@@ -64,11 +64,10 @@
                 text-align: center;
                 }
                 
-            #left_column {
+            .sorted {
                 background-color: lavender;
                 }
                 
-
             a {
                 padding: 10px 15px;
                 text-decoration: none;
@@ -133,8 +132,8 @@
                         arsort($cities);
                         foreach ($cities as $city => $population) : ?>
                         <tr>
-                            <td id="left_column"><strong><?php echo ($city); ?></strong></td>
-                            <td><?php echo (number_format($population)); ?></td>
+                            <td><strong><?php echo ($city); ?></strong></td>
+                            <td class="sorted"><?php echo (number_format($population)); ?></td>
                         </tr>
                         <?php endforeach; ?>
                     </table>
@@ -154,7 +153,7 @@
                         ksort($cities);
                         foreach ($cities as $city => $population) : ?>
                         <tr>
-                            <td id="left_column"><strong><?php echo ($city); ?></strong></td>
+                            <td class="sorted"><strong><?php echo ($city); ?></strong></td>
                             <td><?php echo (number_format($population)); ?></td>
                         </tr>
                         <?php endforeach; ?>
