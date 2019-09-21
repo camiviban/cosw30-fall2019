@@ -6,21 +6,21 @@
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Kodchasan&display=swap" rel="stylesheet">
         <style>
             body {
-            font-family: 'Kodchasan', sans-serif;
-            background-color: lightgray;
-            }
+                font-family: 'Kodchasan', sans-serif;
+                background-color: lightgray;
+                }
             
             h1 {
-            font-family: 'Playfair Display', serif;
-            letter-spacing: .05em;
-            font-size: 3.5em;
-            text-align: center;
-            }
+                font-family: 'Playfair Display', serif;
+                letter-spacing: .05em;
+                font-size: 3.5em;
+                text-align: center;
+                }
             
             hr {
                 color: lavender;
                 width: 25%;
-            }
+                }
             
             #full_page {
                 background-color: whitesmoke;
@@ -32,11 +32,11 @@
                 border-radius: 50px;
                 margin: 2% 17%;
                 box-shadow: 10px 10px 25px lightgray;
-            }
+                }
             
             #outputs {
             padding: 1% 10% 5%;10%;
-            }
+                }
             
             .word_count {
                 background-image: linear-gradient(gold, yellow);
@@ -47,16 +47,26 @@
                 border-radius: 25px;
                 font-size: 1em;
                 box-shadow: 3px 3px 25px lightgray;
-            }
+                }
             
-
+            a {
+                padding: 10px 15px;
+                text-decoration: none;
+                background-color: black;
+                color: white;
+                font-family: 'Playfair Display', serif;
+                letter-spacing: 0.08em;
+                font-size: 1.4em;
+                margin-right: 2%;
+                }
+            
          </style>   
     </head>
 
     <body>
         <section id="full_page">
             <header>
-                <h1>Favorite Quote</h1>
+                <h1 id="page_top">Favorite Quote</h1>
             </header>
             
             <hr>
@@ -133,6 +143,10 @@
                         ?>
                     
                 </section>
+                
+                <p id="quotes_link">
+                    <center><a href="https://cosw30-fall2019.herokuapp.com/homework/homework4/population/population.php">population</a> <a href="https://cosw30-fall2019.herokuapp.com/homework/homework4/quote.html">quotes</a><a href="#page_top">top of page</a></center>
+                    </p>
 
             </main>
         </section>
