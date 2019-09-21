@@ -72,6 +72,7 @@
                 padding: 10px 15px;
                 text-decoration: none;
                 background-color: black;
+                opacity: 0.5;
                 color: white;
                 font-family: 'Playfair Display', serif;
                 letter-spacing: 0.08em;
