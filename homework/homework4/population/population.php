@@ -122,7 +122,7 @@
                         foreach($cities as $city => $population) {
                             echo "$city " . number_format($population) . "<br>"; // Number_format adds the commas back into the population values
                         }
-                        */
+                        
                         ?>
                     
                         <tr>                                
@@ -158,6 +158,52 @@
                             <td><?php echo (number_format($population)); ?></td>
                         </tr>
                         <?php endforeach; ?>
+                    </table>
+                </center>
+                */
+                
+                ?>
+                <tr>                                
+                            <th>CITY/STATE</th>
+                            <th>POPULATION</th>
+                        </tr>
+                          <?php 
+                            arsort($cities);
+                            foreach ($cities as $city => $population) {
+                            echo '<tr>';
+                            echo "<td><strong>$city</strong></td>";
+                            echo "<td class=\"sorted\">";
+                            echo number_format($population);
+                            echo "</td>";
+                            echo '</tr>';
+                            }
+
+                         ?>
+                    </table>
+                    
+                   <table class="table_php">
+                        <thead>
+                            <tr>
+                                <th colspan="2">The 15 Most Populous Cities as of July 1, 2017</th>
+                            </tr>
+                        </thead>
+               
+                        <tr>                                
+                            <th>CITY/STATE</th>
+                            <th>POPULATION</th>
+                        </tr>
+                        <?php 
+                        ksort($cities);
+                        foreach ($cities as $city => $population) {
+                            echo '<tr>';
+                            echo "<td class=\"sorted\"><strong>$city</strong></td>";
+                            echo "<td>";
+                            echo number_format($population);
+                            echo "</td>";
+                            echo '</tr>';
+                            }
+
+                         ?>
                     </table>
                 </center>
                     
