@@ -30,7 +30,7 @@
                 
             #full_page {
                 background-color: whitesmoke;
-                width: 60%;
+                width: 70%;
                 padding: 1%;
                 text-align: left;
                 border-left: 20px solid purple;
@@ -94,7 +94,7 @@
                     <table class="table_php">
                         <thead>
                             <tr>
-                                <th colspan="2">The 15 Most Populous Cities as of July 1, 2017</th>
+                                <th colspan="3">The 15 Most Populous Cities as of July 1, 2017</th>
                             </tr>
                         </thead>
                         <?php
@@ -116,7 +116,11 @@
                             "Columbus, Ohio"=>879170,
                             "Fort Worth, Texas"=>874168
                             );
+                    
                             
+                        $i=1; //Using this to determint the rank numbers for first table
+                        $i_2=1; //Using this to determint the rank numbers for first table (so it doesnt go 16-30)
+                             
                         /*arsort($cities); //This sorts the array by the key CITY NAMES. Use 'ksort' to sort by population value
                         //This foreach will print out each instance of City Name + population number on its own line
                         foreach($cities as $city => $population) {
@@ -163,32 +167,40 @@
                 */
                 
                 ?>
-                <tr>                                
+                        <tr>  
+                            <th>RANK</th>
                             <th>CITY/STATE</th>
                             <th>POPULATION</th>
                         </tr>
+                        
                           <?php 
                             arsort($cities);
-                            foreach ($cities as $city => $population) {
-                            echo '<tr>';
-                            echo "<td><strong>$city</strong></td>";
-                            echo "<td class=\"sorted\">";
-                            echo number_format($population);
-                            echo "</td>";
-                            echo '</tr>';
-                            }
-
+                            //while($i <= sizeof($cities)); { //This is for counting each row
+                                foreach ($cities as $city => $population) {
+                                    //$rank[$ranks] = $value;
+                                    //echo "<td>" . count($ranks) . "</td>";
+                                    echo "<tr>";
+                                    echo "<td>$i</td>";
+                                    echo "<td><strong>$city</strong></td>";
+                                    echo "<td class=\"sorted\">";
+                                    echo number_format($population);
+                                    echo "</td>";
+                                    echo '</tr>';
+                                    $i++;
+                                }
+                            
                          ?>
                     </table>
                     
                    <table class="table_php">
                         <thead>
                             <tr>
-                                <th colspan="2">The 15 Most Populous Cities as of July 1, 2017</th>
+                                <th colspan="3">The 15 Most Populous Cities as of July 1, 2017</th>
                             </tr>
                         </thead>
                
-                        <tr>                                
+                        <tr>     
+                            <th>RANK</th>
                             <th>CITY/STATE</th>
                             <th>POPULATION</th>
                         </tr>
@@ -196,11 +208,14 @@
                         ksort($cities);
                         foreach ($cities as $city => $population) {
                             echo '<tr>';
+                            echo "<td>$i_2</td>";
                             echo "<td class=\"sorted\"><strong>$city</strong></td>";
                             echo "<td>";
                             echo number_format($population);
                             echo "</td>";
                             echo '</tr>';
+                            $i_2++;
+                            
                             }
 
                          ?>
