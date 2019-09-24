@@ -36,13 +36,13 @@
                 border-left: 20px solid purple;
                 border-right: 20px solid purple;
                 border-radius: 50px;
-                margin: 2% 17%;
+                margin: 2% 13%;
                 box-shadow: 10px 10px 25px lightgray;
                 }
                 
             table { 
                 float: left;
-                margin: 2% 5% 7% 5%;
+                margin: 2% 5% 7% 6%;
                 }
                 
             #quotes_link {
