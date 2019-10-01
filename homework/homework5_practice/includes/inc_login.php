@@ -28,19 +28,20 @@
 ?>
 
 <main>
-    
-    <h2>Log In Form</h2>
-    <section="login_section">
-        <section id="text_login">
-            <form action="" method="POST">
-                <label>Email</label><br>
-                <input type="email" name="email" id="email" value="<?php echo $email;?>"><br><br>
-                
-                <label>Password</label><br>
-                <input type="password" name="password" id="password" value="<?php echo $password;?>"><br><br>
-                
-                <input type="submit" name="submit" value="Submit">
-        </form>
+    <section id="main_section">
+        <h2>Log In Form</h2>
+        <section="login_section">
+            <section id="text_login">
+                <form action="" method="POST">
+                    <label>Email</label><br>
+                    <input type="email" name="email" id="email" value="<?php echo $email;?>"><br><br>
+                    
+                    <label>Password</label><br>
+                    <input type="password" name="password" id="password" value="<?php echo $password;?>"><br><br>
+                    
+                    <input type="submit" name="submit" value="Submit">
+            </form>
+            </section>
         </section>
     </section>
 </main>

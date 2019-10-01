@@ -11,7 +11,7 @@
     ?>
     
     <main>
-
+        <section id="main_section">
         <h2>Registration Form</h2>
         <p>Sign up with us today and get the all the gorgeously gloriously sushi updates!</p>
         
@@ -97,7 +97,7 @@
                         <input type="submit" name="submit" value="Register">
             </form>
         </section>
-
+    </section>
     </main>
 
     <?php  //This includes the FOOTER
