@@ -1,0 +1,101 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    text-align: center;
+    }
+    
+h1 {
+    font-family: 'Prata', serif;
+    text-align: left;
+    font-size: 2.2em;
+    letter-spacing: 0.25em;
+    margin-left: 5%;
+    margin-bottom: -2%;
+    }
+    
+header {
+     background-color: white;
+     color: gray;
+     border-bottom: 2px solid lightblue;
+    }
+
+nav {
+    text-align: center;
+    }
+    
+ul {
+    clear: both;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 2%;
+    background-color: white;
+    overflow: hidden;
+    }
+    
+li {
+    float: right;
+    }
+    
+li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    }
+    
+li a:visited {
+    color: black;
+    }
+
+li a:active {
+    color: black;
+    }
+
+li a:hover {
+    background-color: lightblue;
+    color: black;
+    }
+    
+main {
+    background-color: white;
+    margin: 0 30% 5% 10%;
+    padding: 3%;
+    border-radius: 30px;
+    border-bottom: 5px solid lightblue;    
+    }
+    
+#text_section {
+    text-align: left;
+    padding: 5px 15px;
+    }
+    
+#text_login {
+    text-align: center;
+    padding: 5px 15px;
+    }
+    
+#text_intro {
+    text-align: left;
+    padding: 5px 15px;
+    }
+
+
+input {
+    border-radius: 20px;
+    background-color: lavender;
+    }
+    
+.error_message {
+    text-align: left;
+    color: mediumorchid;
+    }
+    
+.success_message {
+    font-weight: bold;
+    }
+
+    footer {
+     background-color: white;
+     color: gray;
+     border-top: 2px solid lightblue;
+     }
