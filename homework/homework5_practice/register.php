@@ -13,10 +13,10 @@
     <main>
         <section id="main_section">
             <h2>Registration Form</h2>
-            <p>Sign up with us today and get the all the gorgeously gloriously sushi updates!</p>
+            <p>Sign up with us today and get all the glorious sushi updates!</p>
             
             <?php
-            //These are the empty variables that would repre
+            //These are the empty variables that would be stickied after user submits them
             $firstname = '';
             $lastname = '';
             $email = '';
@@ -44,7 +44,7 @@
                         echo "<p class=\"error_message\">Please enter your last name</p>";
                     }
                     
-                if (!empty($_REQUEST['email'])) { //This checks if LAST NAME is filled and stickies it. If not, it gives error message
+                if (!empty($_REQUEST['email'])) { //This checks if EMAIL is filled and stickies it. If not, it gives error message
                     $email = $_REQUEST['email']; 
                     } else {
                         $email = NULL;

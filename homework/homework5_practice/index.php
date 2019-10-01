@@ -17,7 +17,7 @@
                 <h2>Sushi? Success!</h2>
                     <section id="text_intro">
                         <p>Welcome to Sushi Success!</p>
-                        <p>Located right by the beaches of Fake City, CA, we offer only the freshest seafood, selected daily by our chefs. From sashimi to nigiri to handrolls, we have it all! Our Happy Hour specials are paralleled by none. We offer an extensive list that includes our handcrafted lychee martinis, a collection of warm (or cold) sake, and more imported beers than you can shake a stick at. </p>
+                        <p>Located right by the beaches of Fake City, CA, we offer only the freshest seafood, selected daily by our chefs. From sashimi to nigiri to handrolls, we have it all! Our Happy Hour specials are paralleled by none. We offer an extensive list that includes our famous handcrafted lychee martinis, an extensive collection of warm (or cold) sake, and more imported beers than you can shake a stick at. </p>
                         <p>Come enjoy a bento box and relax on our beachfront deck, with a front row seat to the Pacific Ocean, the music of the waves, and a sunset waiting just for you!</p><br>
                         
                         <h3>Sushi Success Rewards</h3>
