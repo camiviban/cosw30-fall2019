@@ -36,6 +36,8 @@
                     <p>Thursday: 11AM - 9PM</p>
                     <p>Friday: 11AM - 10PM</p>
                     <p>Saturday: 11AM - 10PM</p>
+                    
+                    <img src="https://i.imgur.com/MuYcaMV.jpg" alt="picture of an evening with a restaurant table and wine glasses">
                 </section>
             </section>
 
