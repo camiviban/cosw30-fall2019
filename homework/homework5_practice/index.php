@@ -29,15 +29,17 @@
             <section class="index_sections">
                 <section id="hours_section"></section>
                     <h3>Hours</h3>
-                    <p>Sunday: 11AM - 10PM</p>
-                    <p>Monday: Closed</p>
-                    <p>Tuesday: 11AM - 9PM</p>
-                    <p>Wednesday: 11AM - 9PM</p>
-                    <p>Thursday: 11AM - 9PM</p>
-                    <p>Friday: 11AM - 10PM</p>
-                    <p>Saturday: 11AM - 10PM</p>
+                    <p>Sunday - 11AM-10PM</p>
+                    <p>Monday - Closed</p>
+                    <p>Tuesday - 11AM-9PM</p>
+                    <p>Wednesday - 11AM-9PM</p>
+                    <p>Thursday - 11AM-9PM</p>
+                    <p>Friday - 11AM-10PM</p>
+                    <p>Saturday - 11AM-10PM</p>
                     
-                    <img src="https://i.imgur.com/MuYcaMV.jpg" alt="picture of an evening with a restaurant table and wine glasses">
+                    <br>
+                    
+                    <p><img src="https://i.imgur.com/MuYcaMV.jpg" alt="picture of an evening with a restaurant table and wine glasses"></p>
                 </section>
             </section>
 
