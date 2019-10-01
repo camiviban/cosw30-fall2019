@@ -1,6 +1,6 @@
     <body>
         <header>
-            <h1>TEAM OF TEAMS</h1>
+            <h1>SUSHI SUCCESS</h1>
             <nav>
                 <ul>
                         <li class="header_link"><a href="login.php">Log In</a></li>

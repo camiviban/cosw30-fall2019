@@ -10,10 +10,12 @@
         include ("includes/header.php");
     ?>
     
+        <img src="https://i.imgur.com/ahmGO8L.jpg" alt="picture of various sushi">
+
         <main>
-            <h2>Practice 5</h2>
+            <h2>Sushi? Success!</h2>
             <section id="text_intro">
-                <p>Cupcake ipsum dolor sit amet lemon drops ice cream bonbon. Macaroon jelly fruitcake marshmallow. Cotton candy muffin sugar plum pudding powder. Gummi bears jujubes wafer.</p>
+                <p>Welcome to Sushi Success</p>
                 <p>Cake cupcake lollipop ice cream sesame snaps cookie. Fruitcake pie carrot cake cake liquorice marshmallow icing dragée. Bonbon macaroon jelly-o wafer sugar plum croissant jelly wafer. Chocolate cake caramels marshmallow tiramisu marshmallow sweet roll tar and mot.</p>
             </section>
 
