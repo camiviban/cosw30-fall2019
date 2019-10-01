@@ -22,8 +22,8 @@ h3 {
     
 header {
      padding-top: 2%;
-     background-color: white;
-     color: gray;
+     background-color: black;
+     color: lightgray;
     }
 
 nav {
@@ -50,11 +50,11 @@ li a {
     }
     
 li a:visited {
-    color: black;
+    color: lightgray;
     }
 
 li a:active {
-    color: black;
+    color: lightgray;
     }
 
 li a:hover {
@@ -72,7 +72,6 @@ img {
     margin: 0 30% 5% 10%;
     padding: 3%;
     border-radius: 30px;
-    border-bottom: 5px solid lightblue;   
     }
     
 .index_sections {
