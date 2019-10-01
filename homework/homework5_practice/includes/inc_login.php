@@ -1,4 +1,8 @@
 
+    
+<main>
+    <section id="main_section">
+        <h2>Log In Form</h2>
 <?php
     $email ='';
     $password ='';
@@ -9,27 +13,23 @@
             $email = $_REQUEST['email'];
             } else {
                 $email = NULL;
-                echo "<p class=\"error_message\">Please fill out your email</p>";
+                echo "<p class=\"error_message\"><center>Please fill out your email</center></p>";
                 }
         
         if(!empty($_REQUEST['password'])) { // This checks if password field is empty. if empty, it submits error message. If it has password, it will sticky it (you cannot see the password characters)
             $password = $_REQUEST['password'];
             } else {
                 $password = NULL;
-                echo "<p class=\"error_message\">Please fill out your password</p>";
+                echo "<p class=\"error_message\"><center>Please fill out your password</center></p>";
                 }
                 
         if (!empty($email && $password)) { //This echos a message if BOTH email/password are filled.
-            echo "<p class=\"success_message\">Thank you for logging in!</p>";
+            echo "<p class=\"success_message\"><center>Thank you for logging in!</center></p>";
             }
 
     }
 
 ?>
-
-<main>
-    <section id="main_section">
-        <h2>Log In Form</h2>
         <section="login_section">
             <section id="text_login">
                 <form action="" method="POST">
@@ -39,7 +39,8 @@
                     <label>Password</label><br>
                     <input type="password" name="password" id="password" value="<?php echo $password;?>"><br><br>
                     
-                    <input type="submit" name="submit" value="Submit">
+                    <center><input type="submit" name="submit" value="Sign In"></center>
+
             </form>
             </section>
         </section>

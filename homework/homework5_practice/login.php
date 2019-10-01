@@ -14,7 +14,9 @@
         include ("includes/inc_login.php");
     ?>
 
+<section id="footer_login">
     <?php  //This includes the FOOTER
         include ("includes/footer.php");
     ?>
-    
+</section>
+
