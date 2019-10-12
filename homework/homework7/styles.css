@@ -1,0 +1,38 @@
+#back_button {
+    background-color: gray;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 10%;
+    }
+    
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Domine', serif;
+    background-color: darkgray;
+    }
+    
+main {
+    background-color: whitesmoke;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 0px 30px 90px #E1E1E1;
+    }
+
+#username {
+    color: red;
+    font-weight: 700;
+    letter-spacing: .15em;
+    }
+
+input[type=submit] {
+    background-color: purple;
+    font-size: 1.15em;
+    padding: 15px 20px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
