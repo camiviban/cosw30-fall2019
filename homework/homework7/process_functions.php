@@ -2,7 +2,7 @@
     <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
-    <title>Homework 7 homework - Functions</title>
+    <title>Homework 7  - Functions</title>
     </head>
         
     <body>
