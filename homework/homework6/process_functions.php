@@ -30,11 +30,11 @@
                     return ($a - $b);
                     }
                     
-            function MULTIPLICATION($a = 0, $b = 0) {
+            function MULTIPLICATION($a = 1, $b = 1) {
                     return ($a * $b);
                     }
                     
-            function DIVISION($a = 0, $b = 0) {
+            function DIVISION($a = 1, $b = 1) {
                     return ($a /= $b);
                     }
           
@@ -71,7 +71,7 @@
                 else if ($_REQUEST['dropdown_operators'] == "divide") // This outputs the MULTIPLY values - so far not working, shows 0 as result??
                     { 
                     echo $value1 . " / " . $value2 . " = ";
-                    echo DIVISION($value1/$value2);
+                    echo DIVISION($value1/=$value2);
                     }
   
 

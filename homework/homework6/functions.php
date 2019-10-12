@@ -26,7 +26,7 @@
              <form action="process_functions.php" method="post">
                  
                 <input type="text" name="name" value="" placeholder="Type your name here" required><br><br>
-                <input type="text" name="value1" value="" placeholder="Type a number" required/>
+                <input type="number" name="value1" value="" placeholder="Type a number" required/>
                 
                 <select name="dropdown_operators" required><br>
                      <option value="">Select an operation...</option>
@@ -36,7 +36,7 @@
                      <option value="divide"> ÷ </option>
                  </select>
                  
-                 <input type="text" name="value2" value="" placeholder="Type a number" required/><br><br>
+                 <input type="number" name="value2" value="" placeholder="Type a number" required/><br><br>
     
                  <input type="submit" value="Calculate the values"/>
              </form>
