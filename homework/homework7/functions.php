@@ -22,6 +22,11 @@
     </head>
      
      <body>
+         
+        <header>
+            <h1>CYBERDYNE SYSTEMS LOG</h1>
+        </header>
+        
          <main>
              <form action="process_functions.php" method="post">
                  
@@ -44,5 +49,9 @@
         <br><br><br>
         <p><a id="back_button" href="functions.php">(reset) calculate</a></p>
         </main>
+        
+        <footer>
+            <p>(c) 1984 - Cyberdyne Systems</p>
+        </footer>
  </body>
 </html>

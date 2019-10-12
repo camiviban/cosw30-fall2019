@@ -6,6 +6,10 @@
     </head>
         
     <body>
+        <header>
+            <h1>CYBERDYNE SYSTEMS LOG</h1>
+        </header>
+        
         <main>
     
     <?php
@@ -40,7 +44,7 @@
           
             function FAREWELL() {
                     echo "<br>";
-                    echo "<p id=\"farewell_p\">We hope you have a nice day, esteemed and valued organic.</p><br>";
+                    echo "<p id=\"farewell_p\">We hope you have a nice day, [INSERT: positive desc \"VALUED\"] organic.</p><br>";
                     }
         
         // This is the end of all functions beings declared
@@ -91,6 +95,10 @@
         <br><br><br>
         <p><a id="back_button" href="functions.php">(reset) calculate</a></p>
         </main>
+        
+        <footer>
+            <p>(c) 1984 - Cyberdyne Systems</p>
+        </footer>
     </body>
     
 </html>
