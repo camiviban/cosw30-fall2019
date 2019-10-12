@@ -17,7 +17,7 @@
 <html>
     <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono|VT323&display=swap" rel="stylesheet">
     <title>Homework 7 - Functions</title>
     </head>
      
@@ -26,23 +26,23 @@
              <form action="process_functions.php" method="post">
                  
                 <input type="text" name="name" value="" placeholder="Type your name here" required><br><br>
-                <input type="number" name="value1" value="" placeholder="Type a number" required/>
+                <input type="number" name="value1" value="" placeholder="[Insert value]" required/>
                 
                 <select name="dropdown_operators" required><br>
-                     <option value="">Select an operation...</option>
+                     <option value=""> [Pick operator]</option>
                      <option value="add"> + </option>
                      <option value="subtract"> - </option>
                      <option value="multiply"> x </option>
-                     <option value="divide"> ÷ </option>
+                     <option value="divide"> / </option>
                  </select>
                  
-                 <input type="number" name="value2" value="" placeholder="Type a number" required/><br><br>
+                 <input type="number" name="value2" value="" placeholder="[Insert value]" required/><br><br>
     
-                 <input type="submit" value="Calculate the values"/>
+                 <input type="submit" value="CALCULATE..."/>
              </form>
              
         <br><br><br>
-        <p><a id="back_button" href="functions.php">Try another calculation</a></p>
+        <p><a id="back_button" href="functions.php">(reset) calculate</a></p>
         </main>
  </body>
 </html>

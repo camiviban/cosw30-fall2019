@@ -1,7 +1,7 @@
 <html>
     <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono|VT323&display=swap" rel="stylesheet">
     <title>Homework 7  - Functions</title>
     </head>
         
@@ -19,7 +19,7 @@
             function GREETING() {
                 if(isset($_POST['name']))
                 $name = $_POST['name'];
-                echo "<p>Hello . . . <span id=\"username\"> $name</span>. Here are your results:</p><br>";
+                echo "<p id=\"greeting_p\">Hello . . . USER <span id=\"username\"> $name</span>. Here are your results:</p><br>";
                 }
             
             function ADDITION($a = 0, $b = 0) { 
@@ -40,7 +40,7 @@
           
             function FAREWELL() {
                     echo "<br>";
-                    echo "<p><em><strong>We hope you have a nice day, esteemed and valued organic.</strong></em></p><br>";
+                    echo "<p id=\"farewell_p\">We hope you have a nice day, esteemed and valued organic.</p><br>";
                     }
         
         // This is the end of all functions beings declared
@@ -53,25 +53,33 @@
             
             if ($_REQUEST['dropdown_operators'] == "add") // This outputs the ADD values using the ADDITION function
                 {
+                 echo "<div class=\"results\">";
                  echo $value1 . " + " . $value2 . " = ";
                  echo ADDITION($value1+$value2); 
+                 echo "</div>";
                  }
                 else if ($_REQUEST['dropdown_operators'] == "subtract") // This outputs the SUBTRACT values using the SUBTRACTION function
                     { 
+                    echo "<div class=\"results\">";
                     echo $value1 . " - " . $value2 . " = ";
                     echo SUBTRACTION($value1-$value2);
+                    echo "</div>";
                     }
                 
                 else if ($_REQUEST['dropdown_operators'] == "multiply") // This outputs the MULTIPLY values - so far not working, shows 0 as result??
                     { 
+                    echo "<div class=\"results\">";
                     echo $value1 . " x " . $value2 . " = ";
                     echo MULTIPLICATION($value1*$value2);
+                    echo "</div>";
                     }
                     
                 else if ($_REQUEST['dropdown_operators'] == "divide") // This outputs the MULTIPLY values - so far not working, shows 0 as result??
                     { 
+                    echo "<div class=\"results\">";
                     echo $value1 . " / " . $value2 . " = ";
                     echo DIVISION($value1/=$value2);
+                    echo "</div>";
                     }
   
 
@@ -81,7 +89,7 @@
              
     <!-- This is the back button to the form -->     
         <br><br><br>
-        <p><a id="back_button" href="functions.php">Try another calculation</a></p>
+        <p><a id="back_button" href="functions.php">(reset) calculate</a></p>
         </main>
     </body>
     
