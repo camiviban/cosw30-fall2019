@@ -1,25 +1,30 @@
 <?php
-// Add the database connection
+// 1). Add the database connection (this is database.php)
+include('database.php')
+
 /*
 *   CHECK IF THE FORM HAS BEEN SUBMITTED AND INSERT
 *   NEW USER INTO THE DATABASE
 */
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-}
+    }
+
 /*
 *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
 */
-// Create your query
-$query = 'SELECT * FROM USER';
-// Run your query
-$result = mysqli_query($connection, $query);
-// Check if the database returned anything
+// 2). Create a variable to store the query. Then create your query. 
+$query = 'SELECT * FROM USER_FONGSURDENAS';
+
+// 3). Run your query. This passes in connection (from database file) and the query
+$result = mysqli_query($connection, $query); 
+
+// 4). Check if the database returned anything
 if($result) {
     while($row = mysqli_fetch_array($result)){
-        // Output the results
+        // Output the results if it works
     }
 } else {
-    // Output an error
+    // Output an error if it doesn't work
 }
 ?>
 
