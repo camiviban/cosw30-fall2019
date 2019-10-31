@@ -25,7 +25,7 @@ if($result) {
     }
 } else {
     // Output an error if it doesn't work
-    echo "This didn't work";
+    echo "This didn't work! Try again please :(";
 }
 ?>
 
