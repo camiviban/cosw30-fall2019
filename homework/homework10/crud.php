@@ -1,6 +1,6 @@
 <?php
 // 1). Add the database connection (this is database.php)
-include('database.php')
+include('database.php');
 
 /*
 *   CHECK IF THE FORM HAS BEEN SUBMITTED AND INSERT
@@ -12,11 +12,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 /*
 *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
 */
-// 2). Create a variable to store the query. Then create your query. 
+// 2). Create a variable to store the query. Then create your query.
 $query = 'SELECT * FROM USER_FONGSURDENAS';
 
 // 3). Run your query. This passes in connection (from database file) and the query
-$result = mysqli_query($connection, $query); 
+$result = mysqli_query($connection, $query);
 
 // 4). Check if the database returned anything
 if($result) {
