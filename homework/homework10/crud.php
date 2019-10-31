@@ -3,31 +3,52 @@
 include('database.php');
 
 /*
-*   CHECK IF THE FORM HAS BEEN SUBMITTED AND INSERT
-*   NEW USER INTO THE DATABASE
+    CHECK IF THE FORM HAS BEEN SUBMITTED AND INSERT NEW USER INTO THE DATABASE
 */
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the user puts into the form
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email = $_POST['email'];
+    $password= $_POST['password'];
+    // Must add validation for input coming in, for assignment (doesn't have it yet, the above is just grabbing data input by user into form)
+
+
+    $insert_query = "INSERT INTO USER_FONGSURDENAS (first_name, last_name, email, password)
+                    VALUES ($first_name, $last_name, $email, $password)"; //This is inserting into database. Parenthesis will be the column names being inserted into. This is SQL. It grabs the POST data and puts it into the query
+
+
+    if($result = mysqli_query($connection, $insert_query)) {
+        echo 'New user added to the database';
+    } else {
+            echo '<strong>Error entering new user</strong>';
+        }
+    // If you get the error, check a few things. Check form to make sure name of inputs is matching. Then check the php. try print_r on $result. Check variable and POST spellings
     }
 
 /*
-*   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
+  QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
 */
-// 2). Create a variable to store the query. Then create your query.
+
+// 2). Create a variable to store the query. Then create your query. Username was created as a table in mysql phpAdmin
 $query = 'SELECT * FROM USER_FONGSURDENAS';
 
-// 3). Run your query. This passes in connection (from database file) and the query
+// 3). Run your query. This passes in the connection (from database file) and the query
 $result = mysqli_query($connection, $query);
 
 // 4). Check if the database returned anything
 if($result) {
-    while($row = mysqli_fetch_array($result)){
-        // Output the results if it works
-    }
-} else {
-    // Output an error if it doesn't work
-    echo "This didn't work! Try again please :(";
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC); // The ASSOC part will spit out the database column names, not made up numbers from php
+   // print_r($rows); Commented this out for now so you don't get a huge list
+
+    } else {
+        // This will output an error if it doesn't work
+        echo "This didn't work! Try again please :(";
 }
 ?>
+
+
+<!-- HTML BEGINS HERE -->
 
 <!doctype html>
 <html>
@@ -65,12 +86,16 @@ if($result) {
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            <?php
+            foreach($rows as $row) {
+                echo '<tr>
+                        <td>'.$row['first_name'].'</td>
+                        <td>'.$row['last_name'].'</td>
+                        <td>'.$row['email'].'</td>
+                        <td>'.$row['password'].'</td>
+                    </tr>';
+            }
+            ?>
         </tbody>
     </table>
 </body>
