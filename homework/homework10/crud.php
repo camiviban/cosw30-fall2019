@@ -90,11 +90,12 @@ if($result) {
     } else {
         // This will output an error if it doesn't work
         echo "This didn't work! Try again please :(";
+    }
 }
 ?>
 
 
-<!-- HTML BEGINS HERE -->
+<!-- HTML BEGINS HERE ------------------------------>
 
 <!doctype html>
 <html>
