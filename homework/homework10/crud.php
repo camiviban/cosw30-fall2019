@@ -57,7 +57,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
 
 
                 if ($firstname && $lastname && $email && $password == $password_confirm and !empty($password_confirm) ) { // This submits a success message if all fields are filled
-                    echo "<p class=\"success_message\">Thank you, $firstname $lastname! You are added to the table.</p>.";
+                    echo "<p class=\"success_message\">Thank you, $firstname $lastname!</p>.";
                     }
                 // ------------------- END VALIDATION MESSAGES  -----------------
 
@@ -109,6 +109,9 @@ if($result) {
 </head>
 <body>
     <h1>Create a New User</h1>
+
+    <br>
+    <h2>TESTING THE FORM FROM GITPOD</h2>
     <form action="crud.php" method="POST">
         <label for="first_name">First Name</label>
         <input type="text" id="first_name" name="first_name"><br>
