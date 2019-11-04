@@ -83,7 +83,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
     // ----------------- This is for inserting the user input into the data base -----------------
 
     $insert_query = "INSERT INTO USER_FONGSURDENAS (first_name, last_name, email, password)
-                    VALUES ('Obi-Wan', 'Kenobi','obi1@sw.com', '123')";
+                    VALUES ('$first_name, '$last_name','$email, '$password')";
     // This is inserting into database. Parenthesis will be the column names being inserted into with SQL. It grabs the POST data and puts it into the query
 
 
@@ -97,7 +97,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
     }
 
 
-  // QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
+// QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
 
 
 
@@ -123,8 +123,6 @@ if($result) {
 
 
 ?>
-
-
 
 
 <!-- HTML TABLE STARTS HERE -->
