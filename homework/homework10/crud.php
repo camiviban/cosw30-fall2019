@@ -1,9 +1,13 @@
 <!doctype html>
 <head>
     <style>
-    #error_message {
+    .error_message {
         color: red;
         }
+
+    .database_error_message {
+        color: red;
+    }
     </style>
 </head>
 <html>
@@ -110,7 +114,7 @@ if($result) {
 ?>
 
 
-// -- HTML BEGINS HERE ------------------------------
+<!-- ------------HTML BEGINS HERE--------------- -->
 
 <center>
 
