@@ -1,4 +1,5 @@
 <!doctype html>
+<html>
 <head>
     <style>
     .error_message {
@@ -10,11 +11,11 @@
         }
     </style>
 </head>
-<html>
+
 
 <?php
-// 1). Add the database connection (this is database.php)
-include('database.php');
+    // 1). Add the database connection (this is database.php)
+    include('database.php');
 
 /*
     CHECK IF THE FORM HAS BEEN SUBMITTED AND INSERT NEW USER INTO THE DATABASE
@@ -25,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
     $password= $_POST['password'];
-    // The above is just grabbing data input by user into form)
+    // The above is just grabbing data input by user into form
 
         // This is for FORM validation and outputting error messages if FORM fields aren't filled out  ---------------
           if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -86,8 +87,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
     if($result = mysqli_query($connection, $insert_query)) {
         echo 'New user added to the database';
     } else {
+            $result = NULL;
             echo "<p class=\"database_error_message\"><strong><center>Error message</strong>: not being able to enter new user</center></p>";
-            print_r($result);
         } // If you get the error, check a few things. Check form to make sure name of inputs is matching. Then check the php. try print_r on $result. Check variable and POST spellings
     }
 
@@ -108,13 +109,14 @@ if($result) {
 
     } else {
         // This will output an error if it doesn't work
+        $result = NULL;
         echo "<p class=\"database_error_message\"><strong><center>Error message if database doesn't return anything</strong>: <em>This didn't work! Try again please :(</em></center></p>";
     }
 }
 ?>
 
 
-<!-- ------------HTML BEGINS HERE--------------- -->
+<!-- HTML BEGINS HERE -->
 
 <center>
 
