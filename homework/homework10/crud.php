@@ -57,7 +57,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
 
 
                 if ($firstname && $lastname && $email && $password == $password_confirm and !empty($password_confirm) ) { // This submits a success message if all fields are filled
-                    echo "<p class=\"success_message\">Thank you, $firstname $lastname!</p>.";
+                    echo "<p class=\"success_message\">Thank you, $firstname $lastname @ $email!</p>.";
                     }
                 // ------------------- END VALIDATION MESSAGES  -----------------
 
@@ -72,7 +72,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
     if($result = mysqli_query($connection, $insert_query)) {
         echo 'New user added to the database';
     } else {
-            echo '<strong><center>Error message: not being able to enter new user</center></strong>';
+            echo '<strong><center>Error message</strong>: not being able to enter new user</center>';
         }
     // If you get the error, check a few things. Check form to make sure name of inputs is matching. Then check the php. try print_r on $result. Check variable and POST spellings
     }
@@ -94,7 +94,7 @@ if($result) {
 
     } else {
         // This will output an error if it doesn't work
-        echo "<strong><center>Error message if it doesn't return anything: <em>This didn't work! Try again please :(</em><strong></center>";
+        echo "<br><strong><center>Error message if database doesn't return anything<strong>: <em>This didn't work! Try again please :(</em></center>";
     }
 }
 ?>
@@ -104,6 +104,9 @@ if($result) {
 
 <!doctype html>
 <html>
+
+<center>
+
 <head>
     <title>My First CRUD</title>
 </head>
@@ -155,4 +158,6 @@ if($result) {
         </tbody>
     </table>
 </body>
+
+</center>
 </html>
