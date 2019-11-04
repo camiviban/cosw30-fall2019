@@ -94,7 +94,7 @@ if($result) {
 
     } else {
         // This will output an error if it doesn't work
-        echo "<strong><center>Error message if it doesn't return anything: <em>This didn't work! Try again please :(</em><strong><center>";
+        echo "<strong><center>Error message if it doesn't return anything: <em>This didn't work! Try again please :(</em><strong></center>";
     }
 }
 ?>
