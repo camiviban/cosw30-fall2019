@@ -183,6 +183,7 @@ if($result) {
                     </tr>';
                 }
             }
+        }
             ?>
         </tbody>
     </table>
