@@ -99,12 +99,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
         } // If you get the error, check a few things. Check form to make sure name of inputs is matching. Then check the php. try print_r on $result. Check variable and POST spellings
     }
 
-*/
+
 
 
 /*
   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
-*/
+
 
 // 2). Create a variable to store the query. Then create your query. Username was created as a table in mysql phpAdmin
 $query = 'SELECT * FROM USER_FONGSURDENAS';
@@ -123,7 +123,13 @@ if($result) {
         echo "<p class=\"error_message\"><strong><center>Error message if database doesn't return anything</strong>: <em>This didn't work! Try again please :(</em></center></p>";
     }
 }
+
+
+
+*/
 ?>
+
+
 
 
 <!-- HTML TABLE STARTS HERE -->
