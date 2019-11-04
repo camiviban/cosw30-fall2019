@@ -83,12 +83,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
     // ----------------- This is for inserting the user input into the data base -----------------
 
     $insert_query = "INSERT INTO USER_FONGSURDENAS (first_name, last_name, email, password)
-                    VALUES ('Obi-Wan', 'Kenobi','obi1@sw.com', 'password')"; // This is inserting into database. Parenthesis will be the column names being inserted into. This is SQL. It grabs the POST data and puts it into the query
+                    VALUES ('Obi-Wan', 'Kenobi','obi1@sw.com', '123')";
+    // This is inserting into database. Parenthesis will be the column names being inserted into with SQL. It grabs the POST data and puts it into the query
 
 
 
 
 /*
+// ----------------- This is for validating the insert, giving either a succecss or error message -----------------
     if($result = mysqli_query($connection, $insert_query)) {
         echo 'New user added to the database';
     } else {
@@ -96,7 +98,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
             echo "<p class=\"error_message\"><strong><center>Error message</strong>: not being able to enter new user</center></p>";
         } // If you get the error, check a few things. Check form to make sure name of inputs is matching. Then check the php. try print_r on $result. Check variable and POST spellings
     }
-    */
+
+*/
+
 
 /*
   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
