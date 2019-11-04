@@ -87,9 +87,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
     // This is inserting into database. Parenthesis will be the column names being inserted into with SQL. It grabs the POST data and puts it into the query
 
 
-
-
-/*
 // ----------------- This is for validating the insert, giving either a succecss or error message -----------------
     if($result = mysqli_query($connection, $insert_query)) {
         echo 'New user added to the database';
@@ -100,10 +97,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
     }
 
 
+  // QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
 
-
-/*
-  QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
 
 
 // 2). Create a variable to store the query. Then create your query. Username was created as a table in mysql phpAdmin
@@ -126,7 +121,7 @@ if($result) {
 
 
 
-*/
+
 ?>
 
 
@@ -182,8 +177,8 @@ if($result) {
                         <td>'.$row['password'].'</td>
                     </tr>';
                 }
-            }
-        }
+
+
             ?>
         </tbody>
     </table>
