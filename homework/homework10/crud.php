@@ -1,3 +1,13 @@
+<!doctype html>
+<head>
+    <style>
+    #error_message {
+        color: red;
+        }
+    </style>
+</head>
+<html>
+
 <?php
 // 1). Add the database connection (this is database.php)
 include('database.php');
@@ -72,7 +82,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
     if($result = mysqli_query($connection, $insert_query)) {
         echo 'New user added to the database';
     } else {
-            echo '<strong><center>Error message</strong>: not being able to enter new user</center>';
+            echo "<p class=\"database_error_message\"><strong><center>Error message</strong>: not being able to enter new user</center></p>";
         }
     // If you get the error, check a few things. Check form to make sure name of inputs is matching. Then check the php. try print_r on $result. Check variable and POST spellings
     }
@@ -94,16 +104,13 @@ if($result) {
 
     } else {
         // This will output an error if it doesn't work
-        echo "<br><strong><center>Error message if database doesn't return anything</strong>: <em>This didn't work! Try again please :(</em></center>";
+        echo "<p class=\"database_error_message\"><strong><center>Error message if database doesn't return anything</strong>: <em>This didn't work! Try again please :(</em></center></p>";
     }
 }
 ?>
 
 
-<!-- HTML BEGINS HERE ------------------------------>
-
-<!doctype html>
-<html>
+// -- HTML BEGINS HERE ------------------------------
 
 <center>
 
@@ -113,7 +120,6 @@ if($result) {
 <body>
     <h1>Create a New User</h1>
 
-    <br>
     <h2>TESTING THE FORM FROM GITPOD</h2>
     <form action="crud.php" method="POST">
         <label for="first_name">First Name</label>
