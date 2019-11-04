@@ -11,33 +11,33 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
     $password= $_POST['password'];
-    // Must add validation for input coming in, for assignment (doesn't have it yet, the above is just grabbing data input by user into form)
+    // The above is just grabbing data input by user into form)
 
-        // This is for validation and outputting error messages if fields aren't filled out  ---------------
+        // This is for FORM validation and outputting error messages if FORM fields aren't filled out  ---------------
           if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-                if (!empty($_REQUEST['first_name'])) { //This checks if FIRST NAME is filled and stickies it. If not, it gives error message
+                if (!empty($_REQUEST['first_name'])) { //This checks if FIRST NAME is filled. If not, it gives error message
                  $firstname = $_REQUEST['first_name'];
                     } else {
                         $firstname = NULL;
                         echo "<p class=\"error_message\">Please enter your first name</p>";
                     }
 
-                if (!empty($_REQUEST['last_name'])) { //This checks if LAST NAME is filled and stickies it. If not, it gives error message
+                if (!empty($_REQUEST['last_name'])) { //This checks if LAST NAME is filled. If not, it gives error message
                     $lastname = $_REQUEST['last_name'];
                     } else {
                         $lastname = NULL;
                         echo "<p class=\"error_message\">Please enter your last name</p>";
                     }
 
-                if (!empty($_REQUEST['email'])) { //This checks if EMAIL is filled and stickies it. If not, it gives error message
+                if (!empty($_REQUEST['email'])) { //This checks if EMAIL is filled. If not, it gives error message
                     $email = $_REQUEST['email'];
                     } else {
                         $email = NULL;
                         echo "<p class=\"error_message\">Please enter your email</p>";
                         }
 
-                if (!empty($_REQUEST['password'])) { // This checks if PASSWORD is filled and stickies it. If not, it gives error message
+                if (!empty($_REQUEST['password'])) { // This checks if PASSWORD is filled. If not, it gives error message
                     $password = $_REQUEST['password'];
                     } else {
                         $password = NULL;
@@ -59,14 +59,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
                 if ($firstname && $lastname && $email && $password == $password_confirm and !empty($password_confirm) ) { // This submits a success message if all fields are filled
                     echo "<p class=\"success_message\">Thank you, $firstname $lastname @ $email!</p>.";
                     }
-                // ------------------- END VALIDATION MESSAGES  -----------------
+                // ------------------- END FORM VALIDATION MESSAGES  -----------------
 
 
 
 
-
+    // ----------------- This is for inserting the user input into the data base -----------------
     $insert_query = "INSERT INTO USER_FONGSURDENAS (first_name, last_name, email, password)
-                    VALUES ($first_name, $last_name, $email, $password)"; //Not sure why the password part is blue. This is inserting into database. Parenthesis will be the column names being inserted into. This is SQL. It grabs the POST data and puts it into the query
+                    VALUES ('$first_name', '$last_name','$email', '$password')"; //Not sure why the password part is blue. This is inserting into database. Parenthesis will be the column names being inserted into. This is SQL. It grabs the POST data and puts it into the query
 
 
     if($result = mysqli_query($connection, $insert_query)) {
@@ -94,7 +94,7 @@ if($result) {
 
     } else {
         // This will output an error if it doesn't work
-        echo "<br><strong><center>Error message if database doesn't return anything<strong>: <em>This didn't work! Try again please :(</em></center>";
+        echo "<br><strong><center>Error message if database doesn't return anything</strong>: <em>This didn't work! Try again please :(</em></center>";
     }
 }
 ?>
