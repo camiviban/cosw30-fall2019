@@ -2,13 +2,12 @@
 <html>
 <head>
     <style>
+
+    /* Simple red colors for any error messages */
     .error_message {
         color: red;
         }
 
-    .database_error_message {
-        color: red;
-        }
     </style>
 </head>
 
@@ -88,7 +87,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
         echo 'New user added to the database';
     } else {
             $result = NULL;
-            echo "<p class=\"database_error_message\"><strong><center>Error message</strong>: not being able to enter new user</center></p>";
+            echo "<p class=\"error_message\"><strong><center>Error message</strong>: not being able to enter new user</center></p>";
         } // If you get the error, check a few things. Check form to make sure name of inputs is matching. Then check the php. try print_r on $result. Check variable and POST spellings
     }
 
@@ -110,7 +109,7 @@ if($result) {
     } else {
         // This will output an error if it doesn't work
         $result = NULL;
-        echo "<p class=\"database_error_message\"><strong><center>Error message if database doesn't return anything</strong>: <em>This didn't work! Try again please :(</em></center></p>";
+        echo "<p class=\"error_message\"><strong><center>Error message if database doesn't return anything</strong>: <em>This didn't work! Try again please :(</em></center></p>";
     }
 }
 ?>
