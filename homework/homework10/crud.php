@@ -13,18 +13,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
     $password= $_POST['password'];
     // Must add validation for input coming in, for assignment (doesn't have it yet, the above is just grabbing data input by user into form)
 
-        // This is for validation and outputting error messages if fields aren't filled out
+        // This is for validation and outputting error messages if fields aren't filled out  ---------------
           if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-                if (!empty($_REQUEST['firstname'])) { //This checks if FIRST NAME is filled and stickies it. If not, it gives error message
-                 $firstname = $_REQUEST['firstname'];
+                if (!empty($_REQUEST['first_name'])) { //This checks if FIRST NAME is filled and stickies it. If not, it gives error message
+                 $firstname = $_REQUEST['first_name'];
                     } else {
                         $firstname = NULL;
                         echo "<p class=\"error_message\">Please enter your first name</p>";
                     }
 
-                if (!empty($_REQUEST['lastname'])) { //This checks if LAST NAME is filled and stickies it. If not, it gives error message
-                    $lastname = $_REQUEST['lastname'];
+                if (!empty($_REQUEST['last_name'])) { //This checks if LAST NAME is filled and stickies it. If not, it gives error message
+                    $lastname = $_REQUEST['last_name'];
                     } else {
                         $lastname = NULL;
                         echo "<p class=\"error_message\">Please enter your last name</p>";
@@ -54,20 +54,25 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // This part is grabbing the data the
                 if ($password !== $password_confirm and !empty($password_confirm)) { // This checks if password/password confirmation match. If they don't, an error message is submitted. if they do match, a success message is submitted
                         echo "<p class=\"error_message\">Password and password confirmation must match</p>";
                         }
-                // END VALIDATION MESSAGES
+
+
+                if ($firstname && $lastname && $email && $password == $password_confirm and !empty($password_confirm) ) { // This submits a success message if all fields are filled
+                    echo "<p class=\"success_message\">Thank you, $firstname $lastname! You are added to the table.</p>.";
+                    }
+                // ------------------- END VALIDATION MESSAGES  -----------------
 
 
 
 
 
     $insert_query = "INSERT INTO USER_FONGSURDENAS (first_name, last_name, email, password)
-                    VALUES ($first_name, $last_name, $email, $password)"; //This is inserting into database. Parenthesis will be the column names being inserted into. This is SQL. It grabs the POST data and puts it into the query
+                    VALUES ($first_name, $last_name, $email, $password)"; //Not sure why the password part is blue. This is inserting into database. Parenthesis will be the column names being inserted into. This is SQL. It grabs the POST data and puts it into the query
 
 
     if($result = mysqli_query($connection, $insert_query)) {
         echo 'New user added to the database';
     } else {
-            echo '<strong>Error entering new user</strong>';
+            echo '<strong><center>Error message: not being able to enter new user</center></strong>';
         }
     // If you get the error, check a few things. Check form to make sure name of inputs is matching. Then check the php. try print_r on $result. Check variable and POST spellings
     }
@@ -89,7 +94,7 @@ if($result) {
 
     } else {
         // This will output an error if it doesn't work
-        echo "This didn't work! Try again please :(";
+        echo "Error message if it doesn't return anything: <em>This didn't work! Try again please :(</em>";
     }
 }
 ?>
@@ -117,7 +122,8 @@ if($result) {
         <label for="password">Password</label>
         <input type="password" id="password" name="password"><br>
 
-        <!--Add a second password input so the user has to retype their password -->
+        <label for="password_confirm">Confirm Password</label>
+        <input type="password" name="password_confirm" id="password_confirm"><br>
 
         <button>Register</button>
     </form>
